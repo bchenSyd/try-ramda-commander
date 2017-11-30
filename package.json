@@ -1,0 +1,25 @@
+{
+  "name": "try-ramda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bochen2014/try-ramda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bochen2014/try-ramda/issues"
+  },
+  "homepage": "https://github.com/bochen2014/try-ramda#readme",
+  "devDependencies": {
+    "ramda": "^0.25.0"
+  },
+  "dependencies": {
+    "promise-polyfill": "6.1.0"
+  }
+}
