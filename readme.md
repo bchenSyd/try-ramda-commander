@@ -1,12 +1,16 @@
 ## how does `commander` workds
 
 ```bash
-ln  bin/try-ramda  node_modules/.bin/try-ramda
+"build": "babel src --out-dir node_modules/try-ramda/lib   --source-maps",
+"postbuild":"cd node_modules/.bin && ln -s ../try-ramda/bin/try-ramda try-ramda",
+"remove": "rm node_modules/.bin/try-ramda",
+"debug": "node --inspect-brk node_modules/try-ramda/bin/try-ramda  start"
 
-yarn try-ramda start
 
-"debug": "node --debug-brk --inspect bin/try-ramda  start"
-
+/media/bochen2014/Work/__work/try-ramda/node_modules/.bin (master *)$ ls -l
+total 7
+lrwxrwxrwx 1 bochen2014 bochen2014 58 Nov 30 23:30 babel -> ../babel-cli/bin/babel.js
+lrwxrwxrwx 1 bochen2014 bochen2014 60 Dec  1 00:04 try-ramda -> ../try-ramda/bin/try-ramda
 ```
 ## source code
 

@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/index.js",
-    "debug": "node --debug-brk --inspect bin/try-ramda  start"
+    "start": "try-ramda start",
+    "build": "babel src --out-dir node_modules/try-ramda/lib --source-maps",
+    "postbuild": "cd node_modules/.bin && ln -s ../try-ramda/bin/try-ramda try-ramda",
+    "uninstall": "rm node_modules/.bin/try-ramda",
+    "debug": "node --inspect-brk node_modules/try-ramda/bin/try-ramda  start"
   },
   "repository": {
     "type": "git",
@@ -21,12 +24,12 @@
     "commander": "^2.12.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "ramda": "^0.25.0"
   }

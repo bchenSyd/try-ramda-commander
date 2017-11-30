@@ -1,4 +1,3 @@
-
 import R from 'ramda';
 
 const data = {
@@ -67,3 +66,10 @@ clientCode('Lena')
     .then(result => {
         console.log(result)
     });
+
+export const start=()=>{
+    clientCode('Lena')
+    .then(result => {
+        console.log(result)
+    });
+}
