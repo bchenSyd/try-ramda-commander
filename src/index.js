@@ -1,5 +1,5 @@
-require('promise-polyfill');
-const R = require('ramda');
+
+import R from 'ramda';
 
 const data = {
     result: "SUCCESS",
