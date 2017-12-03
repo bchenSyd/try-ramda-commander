@@ -25,7 +25,14 @@ npm WARN try-ramda-consumer@1.0.0 No repository field.
 added 2 packages in 5.911s
 ```
 
+## git+https://github.com/bochen2014/try-ramda-commander.git
+this won't give you what you want as it simply include the source code to consumer project;
+`npm publish` won't be run
 
+```bash
+# this won't work. this will install source code; not published version of try-ramda
+$ yarn add --dev git+https://github.com/bochen2014/try-ramda-commander.git
+```
 
 -------------------------------
 # archive (v1)
