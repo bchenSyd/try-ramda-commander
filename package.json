@@ -1,14 +1,20 @@
 {
   "name": "try-ramda",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "try-ramda": "./bin/try-ramda"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "scripts": {
-    "start": "try-ramda start",
-    "build": "babel src --out-dir node_modules/try-ramda/lib --source-maps",
-    "postbuild": "cd node_modules/.bin && ln -s ../try-ramda/bin/try-ramda try-ramda",
-    "uninstall": "rm node_modules/.bin/try-ramda",
-    "debug": "node --inspect-brk node_modules/try-ramda/bin/try-ramda  start"
+    "build": "babel src --out-dir lib",
+    "clean": "rm -rf lib",
+    "prepublish": "npm run build",
+    "postpublish": "npm run clean"
   },
   "repository": {
     "type": "git",
@@ -30,7 +36,9 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.6.1"
+  }, 
+  "peerDependencies": {
     "ramda": "^0.25.0"
   }
 }
