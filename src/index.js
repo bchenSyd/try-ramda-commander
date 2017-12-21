@@ -1,5 +1,10 @@
 import R from 'ramda';
 
+
+export const start = () => {
+    console.log('program started...')
+}
+// example 1: 
 const data = [
     {
         id: 104, complete: false, priority: "high",
@@ -64,8 +69,32 @@ const upperCasePriority = R.over(R.lensProp('priority'), R.toUpper);
 const upperCased = R.map(upperCasePriority)(selected);
 
 R.sortBy(R.compose(R.negate, R.prop('id')))(upperCased);
-console.log(R.sortBy(R.compose(R.negate, R.prop('id')))(upperCased));
 
-export const start=()=>{
-   console.log('program started...')
+
+// expample 2:
+// task: keep the same structure, but confine the deviceList to 'prepaid' only;
+const data = {
+    deviceList: [
+        {
+            id: 1,
+            type: 'postPaid'
+        },
+        {
+            id: 2,
+            type: 'postPaid'
+        },
+        {
+            id: 3,
+            type: 'prepaid'
+        }
+    ]
 }
+
+// this will return a list; as R.view returns a list;
+R.compose(R.filter(e => e.id !== 3),
+    R.view(R.lensProp('deviceList'))
+)(data); 
+
+// this will do the job; as R.over doesn't change data structure; it only mutate data;
+R.over(R.lensProp('deviceList'), R.filter(device => device.type === 'prepaid'))(data)
+
