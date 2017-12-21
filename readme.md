@@ -51,16 +51,25 @@ lrwxrwxrwx 1 bochen2014 bochen2014 58 Nov 30 23:30 babel -> ../babel-cli/bin/bab
 lrwxrwxrwx 1 bochen2014 bochen2014 60 Dec  1 00:04 try-ramda -> ../try-ramda/bin/try-ramda
 ```
 ## source code
+* how does `yarn try-ramda start ` trigger `try-ramda-start`? where is the link established?
 
 ```javascript
-    Command.prototype.command = function(name, desc, opts) {
-    if(typeof desc === 'object' && desc !== null){
-        opts = desc;
-        desc = null;
-    }
-    opts = opts || {};
-    var args = name.split(/ +/);
-    var cmd = new Command(args.shift());
+Command.prototype.parse = function(argv) {
+  debugger;
+  // try-ramda start ==> try-ramda-start
+  if (this.executables && argv.length < 3 && !this.defaultExecutable) {
+    // default to --help (i.e. when no args provided, defualt to --help)
+    argv.push('--help');
+  }
+
+    // executable sub-commands
+  var name = result.args[0]; // this will return you 'start'
+  if (this._execs[name] && typeof this._execs[name] != "function") {
+    return this.executeSubCommand(argv, args, parsed.unknown);
+  }
+}
+
+Command.prototype.command = function(name, desc, opts) {
     //***************************************************************
     debugger;
     if (desc) {
@@ -72,30 +81,6 @@ lrwxrwxrwx 1 bochen2014 bochen2014 60 Dec  1 00:04 try-ramda -> ../try-ramda/bin
         if (opts.isDefault) this.defaultExecutable = cmd._name;
     }
     //***************************************************************
-    cmd._noHelp = !!opts.noHelp;
-    this.commands.push(cmd);
-    cmd.parseExpectedArgs(args);
-    cmd.parent = this;
-
-    if (desc) return this;
-    return cmd;
-    };
-
-
-
-Command.prototype.parse = function(argv) {
-  debugger;
-  // try-ramda ARG ==> try-ramda-ARG 
-  if (this.executables && argv.length < 3 && !this.defaultExecutable) {
-    // default to --help (i.e. when no args provided, defualt to --help)
-    argv.push('--help');
-  }
-
-    // executable sub-commands
-  var name = result.args[0];
-  if (this._execs[name] && typeof this._execs[name] != "function") {
-    return this.executeSubCommand(argv, args, parsed.unknown);
-  }
 }
 
 Command.prototype.executeSubCommand = function(argv, args, unknown) {
