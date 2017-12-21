@@ -11,6 +11,7 @@
     "bin"
   ],
   "scripts": {
+    "start": "babel-node src/index",
     "build": "babel src --out-dir lib",
     "clean": "rm -rf lib",
     "prepublish": "npm run build",
@@ -27,7 +28,8 @@
   },
   "homepage": "https://github.com/bochen2014/try-ramda#readme",
   "dependencies": {
-    "commander": "^2.12.2"
+    "commander": "^2.12.2",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
