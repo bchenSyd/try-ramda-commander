@@ -26,11 +26,12 @@ gulp.task('clean', () => {
 gulp.task('getVer', (cb) => {
     const child = childProcess.spawn(
         'git',
-        ['rev-parse --abbrev-ref HEAD']
+        [   'rev-parse',
+             '--abbrev-ref',
+            'HEAD'],
     );
 
     child.stdout.on('data', function (data) {
-        console.log('git returned....' + data)
         branch = data;
     });
     child.on('close', (exitCode) => {
