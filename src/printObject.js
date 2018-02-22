@@ -42,7 +42,7 @@ function printFile(fileName, value) {
     const path = require('path');
     const fs = require('fs');
     const util = require('util');
-    // issue: JSON.stringify(/\.css/) print an empty object
+    // issue: JSON.stringify(/^regex-expression$/) print an empty object
     // https://stackoverflow.com/a/12075970
     // because there's no canonical representation for a RegExp object in JSON. Thus, it's just an empty object.
 

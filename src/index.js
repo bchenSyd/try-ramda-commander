@@ -73,7 +73,7 @@ R.sortBy(R.compose(R.negate, R.prop('id')))(upperCased);
 
 // expample 2:
 // task: keep the same structure, but confine the deviceList to 'prepaid' only;
-const data = {
+const data2 = {
     deviceList: [
         {
             id: 1,
@@ -93,8 +93,8 @@ const data = {
 // this will return a list; as R.view returns a list;
 R.compose(R.filter(e => e.id !== 3),
     R.view(R.lensProp('deviceList'))
-)(data); 
+)(data2); 
 
 // this will do the job; as R.over doesn't change data structure; it only mutate data;
-R.over(R.lensProp('deviceList'), R.filter(device => device.type === 'prepaid'))(data)
+R.over(R.lensProp('deviceList'), R.filter(device => device.type === 'prepaid'))(data2)
 

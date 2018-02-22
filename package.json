@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "",
   "main": "index.js",
+  "//":" your bin entry will be inserted into node_modules/.bin as a ln -s",
   "bin": {
     "try-ramda": "./bin/try-ramda"
   },
