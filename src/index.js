@@ -1,9 +1,6 @@
 import R from 'ramda';
 
 
-export const start = () => {
-    console.log('program started...')
-}
 // example 1: 
 const data = [
     {
@@ -97,4 +94,9 @@ R.compose(R.filter(e => e.id !== 3),
 
 // this will do the job; as R.over doesn't change data structure; it only mutate data;
 R.over(R.lensProp('deviceList'), R.filter(device => device.type === 'prepaid'))(data2)
+console.log('this is my output');
+
+export const start = () => {
+    console.log('program started...')
+}
 
