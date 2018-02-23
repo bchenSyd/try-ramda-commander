@@ -5,6 +5,11 @@ import gulpUtil from 'gulp-util';
 import header from 'gulp-header';
 import runSequence from 'run-sequence';
 import webpackStream from 'webpack-stream'; // using webpack@^3.4.1
+import { argv } from 'yargs';
+
+// yarn gulp --port 3000
+console.log(`port# is ${argv.port}`);
+gulp.task('argv');
 
 let branch = undefined;
 const getHeader = () =>
@@ -26,8 +31,8 @@ gulp.task('clean', () => {
 gulp.task('getVer', (cb) => {
     const child = childProcess.spawn(
         'git',
-        [   'rev-parse',
-             '--abbrev-ref',
+        ['rev-parse',
+            '--abbrev-ref',
             'HEAD'],
     );
 

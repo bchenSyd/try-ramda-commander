@@ -16,7 +16,8 @@
     "build": "babel src --out-dir lib",
     "clean": "rm -rf lib",
     "prepublish": "npm run build",
-    "postpublish": "npm run clean"
+    "postpublish": "npm run clean",
+    "debug":"node --inspect-brk node_modules/.bin/gulp --port 3000"
   },
   "repository": {
     "type": "git",

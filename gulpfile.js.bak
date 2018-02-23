@@ -1,0 +1,7 @@
+var gulp = require('gulp');
+var argv = require('yargs').argv;
+
+
+gulp.task('default',function(){
+    console.log('port is: ' + argv.port)
+});
