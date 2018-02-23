@@ -1,5 +1,13 @@
-https://www.npmjs.com/package/try-ramda
+## install via git repo
+this won't give you what you want as it simply include the source code to consumer project;
+`npm publish` won't be run
 
+```bash
+# this won't work. this will install source code; not published version of try-ramda
+$ yarn add --dev git+https://github.com/bochen2014/try-ramda-commander.git
+```
+
+https://www.npmjs.com/package/try-ramda
 ## `npm publish -f` not allowed anymore
 > https://github.com/npm/npm-registry-couchapp/issues/148#issue-27410798
 
@@ -25,78 +33,3 @@ npm WARN try-ramda-consumer@1.0.0 No repository field.
 added 2 packages in 5.911s
 ```
 
-## git+https://github.com/bochen2014/try-ramda-commander.git
-this won't give you what you want as it simply include the source code to consumer project;
-`npm publish` won't be run
-
-```bash
-# this won't work. this will install source code; not published version of try-ramda
-$ yarn add --dev git+https://github.com/bochen2014/try-ramda-commander.git
-```
-
--------------------------------
-# archive (v1)
-## how does `commander` workds
-
-```bash
-"build": "babel src --out-dir node_modules/try-ramda/lib   --source-maps",
-"postbuild":"cd node_modules/.bin && ln -s ../try-ramda/bin/try-ramda try-ramda",
-"remove": "rm node_modules/.bin/try-ramda",
-"debug": "node --inspect-brk node_modules/try-ramda/bin/try-ramda  start"
-
-
-/media/bochen2014/Work/__work/try-ramda/node_modules/.bin (master *)$ ls -l
-total 7
-lrwxrwxrwx 1 bochen2014 bochen2014 58 Nov 30 23:30 babel -> ../babel-cli/bin/babel.js
-lrwxrwxrwx 1 bochen2014 bochen2014 60 Dec  1 00:04 try-ramda -> ../try-ramda/bin/try-ramda
-```
-## source code
-* how does `yarn try-ramda start ` trigger `try-ramda-start`? where is the link established?
-
-```javascript
-Command.prototype.parse = function(argv) {
-  debugger;
-  // try-ramda start ==> try-ramda-start
-  if (this.executables && argv.length < 3 && !this.defaultExecutable) {
-    // default to --help (i.e. when no args provided, defualt to --help)
-    argv.push('--help');
-  }
-
-    // executable sub-commands
-  var name = result.args[0]; // this will return you 'start'
-  if (this._execs[name] && typeof this._execs[name] != "function") {
-    return this.executeSubCommand(argv, args, parsed.unknown);
-  }
-}
-
-Command.prototype.command = function(name, desc, opts) {
-    //***************************************************************
-    debugger;
-    if (desc) {
-        cmd.description(desc);
-
-        this.executables = true;
-
-        this._execs[cmd._name] = true;
-        if (opts.isDefault) this.defaultExecutable = cmd._name;
-    }
-    //***************************************************************
-}
-
-Command.prototype.executeSubCommand = function(argv, args, unknown) {
-    if (process.platform !== 'win32') {
-        if (isExplicitJS) {
-        args.unshift(bin);
-        // add executable arguments to spawn
-        args = (process.execArgv || []).concat(args);
-
-        proc = spawn(process.argv[0], args, { stdio: 'inherit', customFds: [0, 1, 2] });
-        } else {
-        proc = spawn(bin, args, { stdio: 'inherit', customFds: [0, 1, 2] });
-        }
-    } else {
-        args.unshift(bin);
-        proc = spawn(process.execPath, args, { stdio: 'inherit'});
-    }
-}
-```
