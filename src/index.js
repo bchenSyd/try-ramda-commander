@@ -87,7 +87,7 @@ const data2 = {
     ]
 }
 
-// this will return a list; as R.view returns a list;
+// this will return a list; as R.view returns the value of lensProp
 R.compose(R.filter(e => e.id !== 3),
     R.view(R.lensProp('deviceList'))
 )(data2); 
