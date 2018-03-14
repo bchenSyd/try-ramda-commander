@@ -9,9 +9,12 @@ function execTests() {
         //     'babel-node',
         //     'src/index.js'],
         'git',
-        [   'rev-parse',
-             '--abbrev-ref',
-            'HEAD'],
+        ['rev-parse',
+          '--abbrev-ref',
+          'HEAD'],
+        // {
+        //   stdio: [0, 1, 2], //calling-process.stdin: 0, calling-process.stdout:1, calling-process.err:2
+        // }
     );
 
     child.stdout.on('data', function (data) {
