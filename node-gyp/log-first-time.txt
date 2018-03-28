@@ -1,0 +1,259 @@
+npm info it worked if it ends with ok
+npm verb cli [ '/usr/local/bin/node',
+npm verb cli   '/usr/local/bin/npm',
+npm verb cli   'install',
+npm verb cli   '--verbose',
+npm verb cli   'fibers' ]
+npm info using npm@5.6.0
+npm info using node@v9.8.0
+npm verb npm-session b81811dd10e75b0b
+npm http fetch GET 304 https://registry.npmjs.org/fibers 281ms (from cache)
+npm verb correctMkdir /root/.npm/_locks correctMkdir not in flight; initializing
+npm verb lock using /root/.npm/_locks/staging-02911efe1417e452.lock for /opt/tmp/node_modules/.staging
+npm info lifecycle fibers@2.0.2~preinstall: fibers@2.0.2
+npm info linkStuff fibers@2.0.2
+npm verb linkBins fibers@2.0.2
+npm verb linkMans fibers@2.0.2
+npm info lifecycle fibers@2.0.2~install: fibers@2.0.2
+
+> fibers@2.0.2 install /opt/tmp/node_modules/fibers
+> node build.js || nodejs build.js
+
+gyp info it worked if it ends with ok
+gyp verb cli [ '/usr/local/bin/node',
+gyp verb cli   '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+gyp verb cli   'rebuild',
+gyp verb cli   '--release' ]
+gyp info using node-gyp@3.6.2
+gyp info using node@9.8.0 | linux | x64
+gyp verb command rebuild []
+gyp verb command clean []
+gyp verb clean removing "build" directory
+gyp verb command configure []
+gyp verb check python checking for Python executable "python2" in the PATH
+gyp verb `which` succeeded python2 /usr/bin/python2
+gyp verb check python version `/usr/bin/python2 -c "import platform; print(platform.python_version());"` returned: "2.7.9\n"
+gyp verb get node dir no --target version specified, falling back to host node version: 9.8.0
+gyp verb command install [ '9.8.0' ]
+gyp verb install input version string "9.8.0"
+gyp verb install installing version: 9.8.0
+gyp verb install --ensure was passed, so won't reinstall if already installed
+gyp verb install version not already installed, continuing with install 9.8.0
+gyp verb ensuring nodedir is created /root/.node-gyp/9.8.0
+gyp verb created nodedir /root/.node-gyp
+gyp http GET https://nodejs.org/download/release/v9.8.0/node-v9.8.0-headers.tar.gz
+gyp http 200 https://nodejs.org/download/release/v9.8.0/node-v9.8.0-headers.tar.gz
+gyp verb extracted file from tarball include/node/android-ifaddrs.h
+gyp verb extracted file from tarball include/node/common.gypi
+gyp verb extracted file from tarball include/node/config.gypi
+gyp verb extracted file from tarball include/node/node.h
+gyp verb extracted file from tarball include/node/node_api.h
+gyp verb extracted file from tarball include/node/node_api_types.h
+gyp verb extracted file from tarball include/node/node_buffer.h
+gyp verb extracted file from tarball include/node/node_object_wrap.h
+gyp verb extracted file from tarball include/node/node_version.h
+gyp verb extracted file from tarball include/node/pthread-barrier.h
+gyp verb extracted file from tarball include/node/stdint-msvc2008.h
+gyp verb extracted file from tarball include/node/tree.h
+gyp verb extracted file from tarball include/node/uv-aix.h
+gyp verb extracted file from tarball include/node/uv-bsd.h
+gyp verb extracted file from tarball include/node/uv-darwin.h
+gyp verb extracted file from tarball include/node/uv-errno.h
+gyp verb extracted file from tarball include/node/uv-linux.h
+gyp verb extracted file from tarball include/node/uv-os390.h
+gyp verb extracted file from tarball include/node/uv-posix.h
+gyp verb extracted file from tarball include/node/uv-sunos.h
+gyp verb extracted file from tarball include/node/uv-threadpool.h
+gyp verb extracted file from tarball include/node/uv-unix.h
+gyp verb extracted file from tarball include/node/uv-version.h
+gyp verb extracted file from tarball include/node/uv-win.h
+gyp verb extracted file from tarball include/node/uv.h
+gyp verb extracted file from tarball include/node/v8-debug.h
+gyp verb extracted file from tarball include/node/v8-inspector-protocol.h
+gyp verb extracted file from tarball include/node/v8-inspector.h
+gyp verb extracted file from tarball include/node/v8-platform.h
+gyp verb extracted file from tarball include/node/v8-profiler.h
+gyp verb extracted file from tarball include/node/v8-testing.h
+gyp verb extracted file from tarball include/node/v8-util.h
+gyp verb extracted file from tarball include/node/v8-value-serializer-version.h
+gyp verb extracted file from tarball include/node/v8-version-string.h
+gyp verb extracted file from tarball include/node/v8-version.h
+gyp verb extracted file from tarball include/node/v8.h
+gyp verb extracted file from tarball include/node/v8config.h
+gyp verb extracted file from tarball include/node/zconf.h
+gyp verb extracted file from tarball include/node/zlib.h
+gyp verb extracted file from tarball include/node/openssl/aes.h
+gyp verb extracted file from tarball include/node/openssl/asn1.h
+gyp verb extracted file from tarball include/node/openssl/asn1_mac.h
+gyp verb extracted file from tarball include/node/openssl/asn1t.h
+gyp verb extracted file from tarball include/node/openssl/bio.h
+gyp verb extracted file from tarball include/node/openssl/blowfish.h
+gyp verb extracted file from tarball include/node/openssl/bn.h
+gyp verb extracted file from tarball include/node/openssl/buffer.h
+gyp verb extracted file from tarball include/node/openssl/camellia.h
+gyp verb extracted file from tarball include/node/openssl/cast.h
+gyp verb extracted file from tarball include/node/openssl/cmac.h
+gyp verb extracted file from tarball include/node/openssl/cms.h
+gyp verb extracted file from tarball include/node/openssl/comp.h
+gyp verb extracted file from tarball include/node/openssl/conf.h
+gyp verb extracted file from tarball include/node/openssl/conf_api.h
+gyp verb extracted file from tarball include/node/openssl/crypto.h
+gyp verb extracted file from tarball include/node/openssl/des.h
+gyp verb extracted file from tarball include/node/openssl/des_old.h
+gyp verb extracted file from tarball include/node/openssl/dh.h
+gyp verb extracted file from tarball include/node/openssl/dsa.h
+gyp verb extracted file from tarball include/node/openssl/dso.h
+gyp verb extracted file from tarball include/node/openssl/dtls1.h
+gyp verb extracted file from tarball include/node/openssl/e_os2.h
+gyp verb extracted file from tarball include/node/openssl/ebcdic.h
+gyp verb extracted file from tarball include/node/openssl/ec.h
+gyp verb extracted file from tarball include/node/openssl/ecdh.h
+gyp verb extracted file from tarball include/node/openssl/ecdsa.h
+gyp verb extracted file from tarball include/node/openssl/engine.h
+gyp verb extracted file from tarball include/node/openssl/err.h
+gyp verb extracted file from tarball include/node/openssl/evp.h
+gyp verb extracted file from tarball include/node/openssl/hmac.h
+gyp verb extracted file from tarball include/node/openssl/idea.h
+gyp verb extracted file from tarball include/node/openssl/krb5_asn.h
+gyp verb extracted file from tarball include/node/openssl/kssl.h
+gyp verb extracted file from tarball include/node/openssl/lhash.h
+gyp verb extracted file from tarball include/node/openssl/md4.h
+gyp verb extracted file from tarball include/node/openssl/md5.h
+gyp verb extracted file from tarball include/node/openssl/mdc2.h
+gyp verb extracted file from tarball include/node/openssl/modes.h
+gyp verb extracted file from tarball include/node/openssl/obj_mac.h
+gyp verb extracted file from tarball include/node/openssl/objects.h
+gyp verb extracted file from tarball include/node/openssl/ocsp.h
+gyp verb extracted file from tarball include/node/openssl/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/opensslv.h
+gyp verb extracted file from tarball include/node/openssl/ossl_typ.h
+gyp verb extracted file from tarball include/node/openssl/pem.h
+gyp verb extracted file from tarball include/node/openssl/pem2.h
+gyp verb extracted file from tarball include/node/openssl/pkcs12.h
+gyp verb extracted file from tarball include/node/openssl/pkcs7.h
+gyp verb extracted file from tarball include/node/openssl/pqueue.h
+gyp verb extracted file from tarball include/node/openssl/rand.h
+gyp verb extracted file from tarball include/node/openssl/rc2.h
+gyp verb extracted file from tarball include/node/openssl/rc4.h
+gyp verb extracted file from tarball include/node/openssl/ripemd.h
+gyp verb extracted file from tarball include/node/openssl/rsa.h
+gyp verb extracted file from tarball include/node/openssl/safestack.h
+gyp verb extracted file from tarball include/node/openssl/seed.h
+gyp verb extracted file from tarball include/node/openssl/sha.h
+gyp verb extracted file from tarball include/node/openssl/srp.h
+gyp verb extracted file from tarball include/node/openssl/srtp.h
+gyp verb extracted file from tarball include/node/openssl/ssl.h
+gyp verb extracted file from tarball include/node/openssl/ssl2.h
+gyp verb extracted file from tarball include/node/openssl/ssl23.h
+gyp verb extracted file from tarball include/node/openssl/ssl3.h
+gyp verb extracted file from tarball include/node/openssl/stack.h
+gyp verb extracted file from tarball include/node/openssl/symhacks.h
+gyp verb extracted file from tarball include/node/openssl/tls1.h
+gyp verb extracted file from tarball include/node/openssl/ts.h
+gyp verb extracted file from tarball include/node/openssl/txt_db.h
+gyp verb extracted file from tarball include/node/openssl/ui.h
+gyp verb extracted file from tarball include/node/openssl/ui_compat.h
+gyp verb extracted file from tarball include/node/openssl/whrlpool.h
+gyp verb extracted file from tarball include/node/openssl/x509.h
+gyp verb extracted file from tarball include/node/openssl/x509_vfy.h
+gyp verb extracted file from tarball include/node/openssl/x509v3.h
+gyp verb content checksum node-v9.8.0-headers.tar.gz db70fe73d960eb847971a8f3826ad2fd5041ef89301491a2b43596e66a50a3ad
+gyp verb extracted file from tarball include/node/openssl/archs/VC-WIN64A/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/VC-WIN32/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/solaris64-x86_64-gcc/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/solaris-x86-gcc/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux64-s390x/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux32-s390x/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-x86_64/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-x32/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-ppc64/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-ppc/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-elf/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-armv4/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/linux-aarch64/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/darwin64-x86_64-cc/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/darwin-i386-cc/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/BSD-x86_64/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/BSD-x86/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/aix64-gcc/opensslconf.h
+gyp verb extracted file from tarball include/node/openssl/archs/aix-gcc/opensslconf.h
+gyp verb extracted file from tarball include/node/libplatform/libplatform-export.h
+gyp verb extracted file from tarball include/node/libplatform/libplatform.h
+gyp verb extracted file from tarball include/node/libplatform/v8-tracing.h
+gyp verb tarball done parsing tarball
+gyp verb check download content checksum, need to download `SHASUMS256.txt`... 
+gyp verb checksum url https://nodejs.org/download/release/v9.8.0/SHASUMS256.txt
+gyp http GET https://nodejs.org/download/release/v9.8.0/SHASUMS256.txt
+gyp http 200 https://nodejs.org/download/release/v9.8.0/SHASUMS256.txt
+gyp verb checksum data {"node-v9.8.0-aix-ppc64.tar.gz":"9cf4a126d679a91821f9832c9b8a534c34d59761b22fca6783c2ff8c45499d47","node-v9.8.0-darwin-x64.tar.gz":"c95326d6d8d01e5d4fbf0ca1b1e4fc0d800d00516f38532cc887e17c78f2af07","node-v9.8.0-darwin-x64.tar.xz":"7964e1f86219d3053949a91ab607e0cb6c8e58a670f90a2fdbf460f86b274cc0","node-v9.8.0-headers.tar.gz":"db70fe73d960eb847971a8f3826ad2fd5041ef89301491a2b43596e66a50a3ad","node-v9.8.0-headers.tar.xz":"514be6a713a8adbc058d3366a89a1738411899c8ea6ac5d70f50900d1c35cc5c","node-v9.8.0-linux-arm64.tar.gz":"2999cfe889aa75aaf0b98fdcb90ebfc32cf55fcafe6149264b302a67394964a7","node-v9.8.0-linux-arm64.tar.xz":"f3537d06f010e77739be073003fca0b477efec8a72d503dc5a1d942a19973b07","node-v9.8.0-linux-armv6l.tar.gz":"7b711f217d62225afe2af77e5ecd72607e1800d14e749b88b4a92f90b357209e","node-v9.8.0-linux-armv6l.tar.xz":"a64e2cfd6de695a7c099d567ec419f7d9e95876e229117abe52da0d14c5a5a3b","node-v9.8.0-linux-armv7l.tar.gz":"638268d6b9717ac2e591b20d5fa63aeeb9d1d195cfd500ef403e85dd073a2681","node-v9.8.0-linux-armv7l.tar.xz":"006926548b5aad77edafea283dc8bd24a2316ce67f59ccfd940c5543a02d5c03","node-v9.8.0-linux-ppc64le.tar.gz":"2026e6c316f9ef645fdd696e0f6a2b0983af8cfee33f48e9aa4841eae52e2c20","node-v9.8.0-linux-ppc64le.tar.xz":"71229efb95fde81c92959b8d4b7e658964be2e45aed73dbe520002cd5a84ed1d","node-v9.8.0-linux-s390x.tar.gz":"00932ccefc8127f2048f60bb882b7414fbb49063ef3cc60c7f81a7ffe9b3a0a4","node-v9.8.0-linux-s390x.tar.xz":"13554cfc8cec68da011e3666a9e19caebe9d7f9389d843fa38578f0fdde92b73","node-v9.8.0-linux-x64.tar.gz":"4e519de3507f810b6567d995169c4b36f433bf5731340ebc1fbbd0b6b6e6c310","node-v9.8.0-linux-x64.tar.xz":"9f631739b0a9b96b8760c42869e88592db9c3fda2425202bd8b2d09e6371133a","node-v9.8.0-linux-x86.tar.gz":"d1093306679b90c7c870364ef8cc5880c1595743d223f9f20ea616d9940b02ea","node-v9.8.0-linux-x86.tar.xz":"93757d8f9d60d902de6efd8f96cdf4b57bdd12808711a9cf1491f40773ace861","node-v9.8.0.pkg":"03a7fc03315d82166e6bbf8a8979f971189a69a75dfb873af8cc74a127f7867b","node-v9.8.0-sunos-x64.tar.gz":"2559a3802039ef4c91063c4e2d9547dd6049e85a0e7f0c4bf15f5d3445c32e00","node-v9.8.0-sunos-x64.tar.xz":"646ec84f5b48c398e535d554c9246d6607431337793654f25f60381786450abe","node-v9.8.0-sunos-x86.tar.gz":"bf0b9b69ea295601c8536c53db76ccce1301db99fdfcad830f4b6f70bb7c5510","node-v9.8.0-sunos-x86.tar.xz":"e177a52fca0c679603c4e88d02b73e53682f7aa8b318c8fefb34d4c080915e84","node-v9.8.0.tar.gz":"e84a1baf8248411d2c875c2f4e519878af3fb62fdfe04f9607cc085e6a0e59d6","node-v9.8.0.tar.xz":"0706bb49e4fa5fa64c6c51941becb4b3854a6c0335425d7312bc086c37b41eac","node-v9.8.0-win-x64.7z":"ede566d6d4260fbfddb8a92073bc92abe01f2ed26ac23825f65cc7aec5285270","node-v9.8.0-win-x64.zip":"dd3971c126907a033f2bc93fdd29327af3ff5b9d151b3b90eb5db1832fe6df9e","node-v9.8.0-win-x86.7z":"1545ad8233230e76940d56e698507fb55807e69ff8ee5ddad7f486dbc76af60d","node-v9.8.0-win-x86.zip":"b79185a4c6e3662640a73c0dd0ac81a6c6a5d27bbbef244fe32f4db6886e6a33","node-v9.8.0-x64.msi":"35715bb7ec90b4025de735a2ca30b7336ffd5ab9678bfc35e509d3d253d9e89e","node-v9.8.0-x86.msi":"ccb1589cfbce371ab3103aaf1b55214f677939b7fdae411dbd9253e8fd484def","win-x64/node.exe":"31822ea3a450863cb774046b8b79a2dacf0655d618cf7381132e496cf52c6e79","win-x64/node.lib":"20a8ecb534e2ebbe8341839ae527535a8c6d48d93578f87569206ca1e60ecb30","win-x64/node_pdb.7z":"119ffbc062db1858a9a13148c3e1d733de1d78f37322b3bdb826ed8eea2129bc","win-x64/node_pdb.zip":"43b2c5adb0a5d7f32016051e664c57f4c608ec4a4991336e1b4094a8fe33d569","win-x86/node.exe":"13dba6c3df441880a9827bf05c5f912c3422fcdaa583c4698d1c3483a597aca0","win-x86/node.lib":"c38e2026305abc0d7a11116a88f49feb1641d6fe3e8d57b2d9c809f0447c911d","win-x86/node_pdb.7z":"8a84a01400465cd13d9dd0910d32e3b2e91da0549eca6ff8c15e3d8d0de4bfc5","win-x86/node_pdb.zip":"4f9c68256476fa7e07d3a341bbe2b31b959f39ca0fad1dfc020a1effbf93c7de"}
+gyp verb download contents checksum {"node-v9.8.0-headers.tar.gz":"db70fe73d960eb847971a8f3826ad2fd5041ef89301491a2b43596e66a50a3ad"}
+gyp verb validating download checksum for node-v9.8.0-headers.tar.gz (db70fe73d960eb847971a8f3826ad2fd5041ef89301491a2b43596e66a50a3ad == db70fe73d960eb847971a8f3826ad2fd5041ef89301491a2b43596e66a50a3ad)
+gyp verb get node dir target node version installed: 9.8.0
+gyp verb build dir attempting to create "build" dir: /opt/tmp/node_modules/fibers/build
+gyp verb build dir "build" dir needed to be created? /opt/tmp/node_modules/fibers/build
+gyp verb build/config.gypi creating config file
+gyp verb build/config.gypi writing out config file: /opt/tmp/node_modules/fibers/build/config.gypi
+gyp verb config.gypi checking for gypi file: /opt/tmp/node_modules/fibers/config.gypi
+gyp verb common.gypi checking for gypi file: /opt/tmp/node_modules/fibers/common.gypi
+gyp verb gyp gyp format was not specified; forcing "make"
+gyp info spawn /usr/bin/python2
+gyp info spawn args [ '/usr/local/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args   'binding.gyp',
+gyp info spawn args   '-f',
+gyp info spawn args   'make',
+gyp info spawn args   '-I',
+gyp info spawn args   '/opt/tmp/node_modules/fibers/build/config.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/usr/local/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/root/.node-gyp/9.8.0/include/node/common.gypi',
+gyp info spawn args   '-Dlibrary=shared_library',
+gyp info spawn args   '-Dvisibility=default',
+gyp info spawn args   '-Dnode_root_dir=/root/.node-gyp/9.8.0',
+gyp info spawn args   '-Dnode_gyp_dir=/usr/local/lib/node_modules/npm/node_modules/node-gyp',
+gyp info spawn args   '-Dnode_lib_file=/root/.node-gyp/9.8.0/<(target_arch)/node.lib',
+gyp info spawn args   '-Dmodule_root_dir=/opt/tmp/node_modules/fibers',
+gyp info spawn args   '-Dnode_engine=v8',
+gyp info spawn args   '--depth=.',
+gyp info spawn args   '--no-parallel',
+gyp info spawn args   '--generator-output',
+gyp info spawn args   'build',
+gyp info spawn args   '-Goutput_dir=.' ]
+gyp verb command build []
+gyp verb build type Release
+gyp verb architecture x64
+gyp verb node dev dir /root/.node-gyp/9.8.0
+gyp verb `which` succeeded for `make` /usr/bin/make
+gyp info spawn make
+gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+make: Entering directory '/opt/tmp/node_modules/fibers/build'
+  g++ '-DNODE_GYP_MODULE_NAME=fibers' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DUSE_CORO' '-DCORO_GUARDPAGES=1' '-DCORO_UCONTEXT' '-DBUILDING_NODE_EXTENSION' -I/root/.node-gyp/9.8.0/include/node -I/root/.node-gyp/9.8.0/src -I/root/.node-gyp/9.8.0/deps/uv/include -I/root/.node-gyp/9.8.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -MMD -MF ./Release/.deps/Release/obj.target/fibers/src/fibers.o.d.raw   -c -o Release/obj.target/fibers/src/fibers.o ../src/fibers.cc
+  g++ '-DNODE_GYP_MODULE_NAME=fibers' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DUSE_CORO' '-DCORO_GUARDPAGES=1' '-DCORO_UCONTEXT' '-DBUILDING_NODE_EXTENSION' -I/root/.node-gyp/9.8.0/include/node -I/root/.node-gyp/9.8.0/src -I/root/.node-gyp/9.8.0/deps/uv/include -I/root/.node-gyp/9.8.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -MMD -MF ./Release/.deps/Release/obj.target/fibers/src/coroutine.o.d.raw   -c -o Release/obj.target/fibers/src/coroutine.o ../src/coroutine.cc
+  cc '-DNODE_GYP_MODULE_NAME=fibers' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DUSE_CORO' '-DCORO_GUARDPAGES=1' '-DCORO_UCONTEXT' '-DBUILDING_NODE_EXTENSION' -I/root/.node-gyp/9.8.0/include/node -I/root/.node-gyp/9.8.0/src -I/root/.node-gyp/9.8.0/deps/uv/include -I/root/.node-gyp/9.8.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -O3 -fno-omit-frame-pointer -std=gnu11 -MMD -MF ./Release/.deps/Release/obj.target/fibers/src/libcoro/coro.o.d.raw   -c -o Release/obj.target/fibers/src/libcoro/coro.o ../src/libcoro/coro.c
+  g++ -shared -pthread -rdynamic -m64 -pthread  -Wl,-soname=fibers.node -o Release/obj.target/fibers.node -Wl,--start-group Release/obj.target/fibers/src/fibers.o Release/obj.target/fibers/src/coroutine.o Release/obj.target/fibers/src/libcoro/coro.o -Wl,--end-group 
+  rm -rf "Release/fibers.node" && cp -af "Release/obj.target/fibers.node" "Release/fibers.node"
+make: Leaving directory '/opt/tmp/node_modules/fibers/build'
+gyp info ok 
+Installed in `/opt/tmp/node_modules/fibers/bin/linux-x64-59/fibers.node`
+npm verb lifecycle fibers@2.0.2~install: unsafe-perm in lifecycle false
+npm verb lifecycle fibers@2.0.2~install: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/opt/tmp/node_modules/fibers/node_modules/.bin:/opt/tmp/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/lib/node_modules/npm/bin
+npm verb lifecycle fibers@2.0.2~install: CWD: /opt/tmp/node_modules/fibers
+npm info lifecycle fibers@2.0.2~postinstall: fibers@2.0.2
+npm verb unlock done using /root/.npm/_locks/staging-02911efe1417e452.lock for /opt/tmp/node_modules/.staging
+npm WARN saveError ENOENT: no such file or directory, open '/opt/tmp/package.json'
+npm info lifecycle undefined~preshrinkwrap: undefined
+npm info lifecycle undefined~shrinkwrap: undefined
+npm verb shrinkwrap skipping write for package-lock.json because there were no changes.
+npm info lifecycle undefined~postshrinkwrap: undefined
+npm WARN enoent ENOENT: no such file or directory, open '/opt/tmp/package.json'
+npm verb enoent This is related to npm not being able to find a file.
+npm verb enoent 
+npm WARN tmp No description
+npm WARN tmp No repository field.
+npm WARN tmp No README data
+npm WARN tmp No license field.
+
++ fibers@2.0.2
+added 1 package in 8.692s
+npm verb exit [ 0, true ]
+npm info ok 

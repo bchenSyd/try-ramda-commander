@@ -1,0 +1,119 @@
+npm info it worked if it ends with ok
+npm verb cli [ '/usr/local/bin/node',
+npm verb cli   '/usr/local/bin/npm',
+npm verb cli   'install',
+npm verb cli   'fibers',
+npm verb cli   '--verbose',
+npm verb cli   '-f' ]
+npm info using npm@5.6.0
+npm info using node@v9.8.0
+npm WARN using --force I sure hope you know what you are doing.
+npm verb npm-session 54afd031a4a1a9e0
+npm http fetch GET 304 https://registry.npmjs.org/fibers 316ms (from cache)
+npm verb correctMkdir /root/.npm/_locks correctMkdir not in flight; initializing
+npm verb lock using /root/.npm/_locks/staging-02911efe1417e452.lock for /opt/tmp/node_modules/.staging
+npm info lifecycle fibers@2.0.2~preuninstall: fibers@2.0.2
+npm info lifecycle fibers@2.0.2~uninstall: fibers@2.0.2
+npm verb unbuild rmStuff fibers@2.0.2 from /opt/tmp/node_modules
+npm info lifecycle fibers@2.0.2~postuninstall: fibers@2.0.2
+npm info lifecycle fibers@2.0.2~preinstall: fibers@2.0.2
+npm info linkStuff fibers@2.0.2
+npm verb linkBins fibers@2.0.2
+npm verb linkMans fibers@2.0.2
+npm info lifecycle fibers@2.0.2~install: fibers@2.0.2
+
+> fibers@2.0.2 install /opt/tmp/node_modules/fibers
+> node build.js || nodejs build.js
+
+gyp info it worked if it ends with ok
+gyp verb cli [ '/usr/local/bin/node',
+gyp verb cli   '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+gyp verb cli   'rebuild',
+gyp verb cli   '--release' ]
+gyp info using node-gyp@3.6.2
+gyp info using node@9.8.0 | linux | x64
+gyp verb command rebuild []
+gyp verb command clean []
+gyp verb clean removing "build" directory
+gyp verb command configure []
+gyp verb check python checking for Python executable "python2" in the PATH
+gyp verb `which` succeeded python2 /usr/bin/python2
+gyp verb check python version `/usr/bin/python2 -c "import platform; print(platform.python_version());"` returned: "2.7.9\n"
+gyp verb get node dir no --target version specified, falling back to host node version: 9.8.0
+gyp verb command install [ '9.8.0' ]
+gyp verb install input version string "9.8.0"
+gyp verb install installing version: 9.8.0
+gyp verb install --ensure was passed, so won't reinstall if already installed
+gyp verb install version is already installed, need to check "installVersion"
+gyp verb got "installVersion" 9
+gyp verb needs "installVersion" 9
+gyp verb install version is good
+gyp verb get node dir target node version installed: 9.8.0
+gyp verb build dir attempting to create "build" dir: /opt/tmp/node_modules/fibers/build
+gyp verb build dir "build" dir needed to be created? /opt/tmp/node_modules/fibers/build
+gyp verb build/config.gypi creating config file
+gyp verb build/config.gypi writing out config file: /opt/tmp/node_modules/fibers/build/config.gypi
+gyp verb config.gypi checking for gypi file: /opt/tmp/node_modules/fibers/config.gypi
+gyp verb common.gypi checking for gypi file: /opt/tmp/node_modules/fibers/common.gypi
+gyp verb gyp gyp format was not specified; forcing "make"
+gyp info spawn /usr/bin/python2
+gyp info spawn args [ '/usr/local/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args   'binding.gyp',
+gyp info spawn args   '-f',
+gyp info spawn args   'make',
+gyp info spawn args   '-I',
+gyp info spawn args   '/opt/tmp/node_modules/fibers/build/config.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/usr/local/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/root/.node-gyp/9.8.0/include/node/common.gypi',
+gyp info spawn args   '-Dlibrary=shared_library',
+gyp info spawn args   '-Dvisibility=default',
+gyp info spawn args   '-Dnode_root_dir=/root/.node-gyp/9.8.0',
+gyp info spawn args   '-Dnode_gyp_dir=/usr/local/lib/node_modules/npm/node_modules/node-gyp',
+gyp info spawn args   '-Dnode_lib_file=/root/.node-gyp/9.8.0/<(target_arch)/node.lib',
+gyp info spawn args   '-Dmodule_root_dir=/opt/tmp/node_modules/fibers',
+gyp info spawn args   '-Dnode_engine=v8',
+gyp info spawn args   '--depth=.',
+gyp info spawn args   '--no-parallel',
+gyp info spawn args   '--generator-output',
+gyp info spawn args   'build',
+gyp info spawn args   '-Goutput_dir=.' ]
+gyp verb command build []
+gyp verb build type Release
+gyp verb architecture x64
+gyp verb node dev dir /root/.node-gyp/9.8.0
+gyp verb `which` succeeded for `make` /usr/bin/make
+gyp info spawn make
+gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+make: Entering directory '/opt/tmp/node_modules/fibers/build'
+  g++ '-DNODE_GYP_MODULE_NAME=fibers' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DUSE_CORO' '-DCORO_GUARDPAGES=1' '-DCORO_UCONTEXT' '-DBUILDING_NODE_EXTENSION' -I/root/.node-gyp/9.8.0/include/node -I/root/.node-gyp/9.8.0/src -I/root/.node-gyp/9.8.0/deps/uv/include -I/root/.node-gyp/9.8.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -MMD -MF ./Release/.deps/Release/obj.target/fibers/src/fibers.o.d.raw   -c -o Release/obj.target/fibers/src/fibers.o ../src/fibers.cc
+  g++ '-DNODE_GYP_MODULE_NAME=fibers' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DUSE_CORO' '-DCORO_GUARDPAGES=1' '-DCORO_UCONTEXT' '-DBUILDING_NODE_EXTENSION' -I/root/.node-gyp/9.8.0/include/node -I/root/.node-gyp/9.8.0/src -I/root/.node-gyp/9.8.0/deps/uv/include -I/root/.node-gyp/9.8.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -MMD -MF ./Release/.deps/Release/obj.target/fibers/src/coroutine.o.d.raw   -c -o Release/obj.target/fibers/src/coroutine.o ../src/coroutine.cc
+  cc '-DNODE_GYP_MODULE_NAME=fibers' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DUSE_CORO' '-DCORO_GUARDPAGES=1' '-DCORO_UCONTEXT' '-DBUILDING_NODE_EXTENSION' -I/root/.node-gyp/9.8.0/include/node -I/root/.node-gyp/9.8.0/src -I/root/.node-gyp/9.8.0/deps/uv/include -I/root/.node-gyp/9.8.0/deps/v8/include  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -O3 -fno-omit-frame-pointer -std=gnu11 -MMD -MF ./Release/.deps/Release/obj.target/fibers/src/libcoro/coro.o.d.raw   -c -o Release/obj.target/fibers/src/libcoro/coro.o ../src/libcoro/coro.c
+  g++ -shared -pthread -rdynamic -m64 -pthread  -Wl,-soname=fibers.node -o Release/obj.target/fibers.node -Wl,--start-group Release/obj.target/fibers/src/fibers.o Release/obj.target/fibers/src/coroutine.o Release/obj.target/fibers/src/libcoro/coro.o -Wl,--end-group 
+  rm -rf "Release/fibers.node" && cp -af "Release/obj.target/fibers.node" "Release/fibers.node"
+make: Leaving directory '/opt/tmp/node_modules/fibers/build'
+gyp info ok 
+Installed in `/opt/tmp/node_modules/fibers/bin/linux-x64-59/fibers.node`
+npm verb lifecycle fibers@2.0.2~install: unsafe-perm in lifecycle false
+npm verb lifecycle fibers@2.0.2~install: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/opt/tmp/node_modules/fibers/node_modules/.bin:/opt/tmp/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+npm verb lifecycle fibers@2.0.2~install: CWD: /opt/tmp/node_modules/fibers
+npm info lifecycle fibers@2.0.2~postinstall: fibers@2.0.2
+npm verb unlock done using /root/.npm/_locks/staging-02911efe1417e452.lock for /opt/tmp/node_modules/.staging
+npm WARN saveError ENOENT: no such file or directory, open '/opt/tmp/package.json'
+npm info lifecycle undefined~preshrinkwrap: undefined
+npm info lifecycle undefined~shrinkwrap: undefined
+npm verb shrinkwrap skipping write for package-lock.json because there were no changes.
+npm info lifecycle undefined~postshrinkwrap: undefined
+npm WARN enoent ENOENT: no such file or directory, open '/opt/tmp/package.json'
+npm verb enoent This is related to npm not being able to find a file.
+npm verb enoent 
+npm WARN tmp No description
+npm WARN tmp No repository field.
+npm WARN tmp No README data
+npm WARN tmp No license field.
+
++ fibers@2.0.2
+updated 1 package in 2.424s
+npm verb exit [ 0, true ]
+npm info ok 
