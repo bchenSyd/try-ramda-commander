@@ -42,3 +42,20 @@ so npm check `package.json`
   "name": "node-gyp",
 ```
 so `./lib/node-gyp.js` is the real definition file of `node-gyp`
+
+## override node-headers download url
+1. `docker run --rm -it -e "npm_config_disturl=http://a.com/b.tgz" node bash`
+2. `npm config get disturl`
+    http://a.com/b.tgz
+3. `npm install --verbose fibers`
+Error:
+```
+gyp http GET http://a.com/b.tgz/v9.8.0/node-v9.8.0-headers.tar.gz
+gyp WARN install got an error, rolling back install
+gyp ERR! configure error 
+gyp ERR! stack Error: This is most likely not a problem with node-gyp or the package itself and
+gyp ERR! stack is related to network connectivity. In most cases you are behind a proxy or have bad 
+gyp ERR! stack network settings.
+gyp ERR! stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/install.js:193:21)
+```
+
