@@ -59,3 +59,21 @@ gyp ERR! stack network settings.
 gyp ERR! stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/install.js:193:21)
 ```
 
+
+# yum provides (a very powful tool that Ubuntu doesn't provide)
+`npm install --verbose fibers`
+1. gyp ERR! stack Error: not found: make
+
+   1.1 `yum provides make` 
+   1:make-3.82-23.el7.x86_64 : A GNU tool which simplifies the build process for users
+   Repo        : base
+   1.2 `yum install make`
+2. make: g++: Command not found
+
+   2.1 `yum install g++ ` ==> no such package
+   2.2 `yum provides g++`
+        gcc-c++-4.8.5-16.el7.x86_64 : C++ support for GCC
+        Repo        : base
+        Matched from:
+        Filename    : /usr/bin/g++
+  2.3 `yum install -y gcc-c++`
